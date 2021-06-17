@@ -11,7 +11,7 @@ const cats = [
     {
         name : 'Felix',
         eta : 7,
-        color : '#FFFFFF',
+        color : '#ff0000',
         sesso : 'M'
     },
     {
@@ -23,9 +23,14 @@ const cats = [
     {
         name : 'Kitty',
         eta : 10,
-        color : '#FFFFFF',
+        color : '#ffff00',
         sesso : 'F'
     }
 ];
 
-cats.forEach((element) => console.log(element.name, element.color));
+cats.forEach((element) => {
+    document.getElementById('cats').innerHTML += 
+    `
+    ${element.name} <i class="fas fa-cat" style = "color:${element.color};"></i>
+    `
+});
